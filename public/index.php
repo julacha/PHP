@@ -1,6 +1,6 @@
 <?php
 require_once '../src/util.php';
-require '..src/template/head.php';
+require '../src/template/head.php';
 $myname = " Julia ";
 echo "My name is" . $myname;
 $favourite = "melon";
@@ -13,6 +13,7 @@ echo "<hr>";
 echo "I am " . ($num + 20);
 echo "<hr>";
 add(5,10);
-require '..src/template/footer.php';
+echo "<hr>";
+require '../src/template/footer.php';
 ?>
 
