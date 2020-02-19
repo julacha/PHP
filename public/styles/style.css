@@ -1,0 +1,46 @@
+body {
+    background-color: burlywood;
+}
+/*
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.element {
+    width: 100px;
+    height: 100px;
+}
+
+.fizz {
+    background-color: blueviolet;
+}
+
+.buzz {
+    background-color: chartreuse;
+}
+
+.fizzbuzz {
+    background-color: coral;
+}
+
+.number {
+    background-color: navajowhite;
+}
+ */
+.tracks-container {
+    display: flex;
+    justify-content: center;
+}
+
+.track-cell {
+    display: inline-block;
+    height: 20px;
+    background-color: crimson;
+    margin: 5px;
+}
+
+.col-fields {
+    background-color: plum;
+    margin: 5px;
+}

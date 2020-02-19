@@ -13,13 +13,17 @@ if ($conn->connect_error) {
 }
 echo "Connected successfully";
 
-$sql = "SELECT id, firstname, lastname FROM MyGuests";
+$sql = "SELECT * FROM tracks";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+   // output data of each row
+    while ($row = $result->fetch_assoc()) {
+       echo "<div class='tracks-cont'>";
+       echo "<span class='track-cell'>id: " . $row["id"] . "</span>";
+       echo "<span class='track-cell'>name: " . $row["name"] . "</span>";
+       echo "<span class='track-cell'>album: " . $row["album"] . "</span>";
+       echo "</div>";
     }
 } else {
     echo "0 results";
