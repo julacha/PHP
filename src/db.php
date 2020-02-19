@@ -16,7 +16,31 @@ echo "Connected successfully";
 $sql = "SELECT * FROM tracks";
 $result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
+
+$rows = $result->fetch_all(MYSQLI_ASSOC);
+//var_dump($rows);
+
+echo "<hr>";
+$areColumnSet = false;
+
+foreach ($rows as $index => $row){
+    if (!$areColumnSet){
+        echo "<div class='tracks-cont'>";
+        foreach ($row as $colname => $cell){ 
+            echo "<span class='col-fields'>$colname</span>";  
+    }
+    echo "</div>";
+    $areColumnSet = true;
+}
+    echo "<div class='track-cont'>";
+    echo "Row: $index";
+    //print_r($index);
+    foreach ($row as $colname => $cell){
+        echo "<span class='track-cell'>$cell</span>";
+    }
+    echo "</div>";
+}
+/* if ($result->num_rows > 0) {
    // output data of each row
     while ($row = $result->fetch_assoc()) {
        echo "<div class='tracks-cont'>";
@@ -27,6 +51,5 @@ if ($result->num_rows > 0) {
     }
 } else {
     echo "0 results";
-}
+} */
 $conn->close();
-?>
