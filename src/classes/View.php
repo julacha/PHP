@@ -5,10 +5,13 @@ class View{
     }
     public function printSongs($songs){//esli public, to model.php dolzhen videtj
         echo "<hr>Printing songs</br>";
-        foreach ($songs as $song){
+    /*     foreach ($songs as $song){
             echo "<br>";
-            print_r($song);
-        }
+            print_r($song); 
+        }*/
+        echo "<hr>";
+        $areColumnSet = false;
+        
         foreach ($songs as $index => $row){
             if (!$areColumnSet){
                 echo "<div class='tracks-cont'>";
