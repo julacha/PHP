@@ -1,16 +1,27 @@
-<form action="form.php" method="get">
-<input type="date" name ="mydate" id = "">
-<input type="number" name ="mynumber" id = "">
-<input type="text" name ="mytext" id = "">
-<button type="submit">Submit</button>
-</form>
 <?php
-if (isset($_GET['mydate'])){ 
-    echo "your data is:" . $_GET["mydate"] . "<br>";
+
+echo '<form action="form.php" method="get">';
+echo "<input type=' date'  name=' mydate'  id=' '  value=' 2020-02-20' >";
+if (isset($_GET['mynumber'])) {
+    $mynumber = $_GET['mynumber'];
+    echo "<input type='number' name='mynumber' id='' value='$mynumber'>";
 }
-    if (isset($_GET['mynumber'])){ 
-        echo "your data is:" . $_GET["mynumber"] . "<br>";
-    }
-        if (isset($_GET['mytext'])){ 
-            echo "your data is:" . $_GET["mytext"] . "<br>";
-        }
+?>
+    <input type="text" name="mytext" id="" value="Valdis">
+    <button type="submit">SUBMIT</button>
+</form>
+
+<?php
+if (isset($_GET['mydate'])) {
+    echo "Your date is:" . $_GET['mydate'] . "<br>";
+}
+
+if (isset($_GET['mytext'])) {
+    echo "Your date is:" . $_GET['mytext'] . "<br>";
+}
+
+/*<form action="form.php" method="get">;
+<input type='date' name ='mydate' id = '' value='2020-02-20'>;
+<input type="number" name ="mynumber" id = "" value="5">
+<input type="text" name ="mytext" id = "" value="Liza">
+</form> */
