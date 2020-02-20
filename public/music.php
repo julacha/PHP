@@ -1,6 +1,10 @@
 <?php
-require_once "../src/template/head.php";
-require_once "../src/db.php";
-echo "<h1>My music</h1>";
+require_once "../config/config.php";
+require_once "../src/classes/View.php";
+require_once "../src/classes/Model.php";
 
-require_once "../src/template/footer.php";
+$model = new Model($config);
+require_once "../src/template/head.php";
+echo "<h1>My Music</h1><hr>";
+
+require "../src/template/footer.php";
