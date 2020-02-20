@@ -1,10 +1,13 @@
 <?php
-class Model
-{   //no need be public connection
+class Model //otvechaet za bazu dannih, shablon dla zapisi dopolnitelnih zaprosov
+{   
+    const MODELNAME = "Our data store and methods";
+    //no need be public connection
     private $conn = null;
-    //private $view;
+    private $view;//vizivaem
 
-    public function __construct($config) {
+    public function __construct($config, View $view) {//view podan, type hinting that we need to pass View
+        $this->view=$view;//dobavili
         $server = $config['server'];
         $db = $config['db'];
         $user = $config['user'];
@@ -19,10 +22,12 @@ class Model
 public function getSongs($userid = null){
 $stmt = $this->conn->prepare ("SELECT*FROM tracks");
 //prepare goes here
-$stmt->execute();
+$stmt->execute();//zapros vipolnitj i ustanovitj rezhim i rspechatatj
 //rezhim
 $stmt->setFetchMode(PDO::FETCH_ASSOC);
 $allRows = $stmt->fetchAll();
-var_dump($allRows);
+//var_dump($allRows);
+$this->view->printSongs($allRows);
+
 }
 }
