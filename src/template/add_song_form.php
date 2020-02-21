@@ -10,9 +10,6 @@
 <label for="songlen">Duration</label>
 <input type="text" name="songlen">
 
-
-
-
 <button type="submit">SUBMIT</button>
 
 

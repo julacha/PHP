@@ -6,11 +6,13 @@ class View{
     public function printSongs($songs){//esli public, to model.php dolzhen videtj
     require_once "../src/template/head.php";
     echo "<h1>My Music</h1><hr>";
-    echo "<hr>Printing songs</br>";
-    /*     foreach ($songs as $song){
+    /* echo "<hr>Printing songs</br>";
+        foreach ($songs as $song){
             echo "<br>";
             print_r($song); 
         }*/
+        include "../src/template/add_song_form.php";
+        echo "<hr>";
         include "../src/template/song_filter_form.php";
         echo "<hr>";
         $areColumnSet = false;
