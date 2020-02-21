@@ -4,11 +4,14 @@ class View{
         //todo print all of the page.
     }
     public function printSongs($songs){//esli public, to model.php dolzhen videtj
-        echo "<hr>Printing songs</br>";
+    require_once "../src/template/head.php";
+    echo "<h1>My Music</h1><hr>";
+    echo "<hr>Printing songs</br>";
     /*     foreach ($songs as $song){
             echo "<br>";
             print_r($song); 
         }*/
+        include "../src/template/song_filter_form.php";
         echo "<hr>";
         $areColumnSet = false;
         
@@ -29,9 +32,5 @@ class View{
             }
             echo "</div>";
         }
-
-
-
-
     }
 }
