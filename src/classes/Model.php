@@ -20,7 +20,11 @@ class Model //otvechaet za bazu dannih,logiku, shablon dla zapisi dopolnitelnih 
     public function getSongs($songname = null)
     {
      if($songname)  {
-        $stmt = $this->conn->prepare ("SELECT*FROM tracks WHERE name LIKE '%$songname%'");
+        $songname = "%$songname%";
+        $stmt = $this->conn->prepare ("SELECT*FROM tracks WHERE name LIKE (:songname)");
+        $stmt->bindParam(':songname',$songname);
+        //not safe
+        //$stmt = $this->conn->prepare ("SELECT*FROM tracks WHERE name LIKE '%$songname%'");
      } else {
         $stmt = $this->conn->prepare ("SELECT*FROM tracks");
      }
