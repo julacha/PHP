@@ -17,20 +17,21 @@ class View{
         
         foreach ($songs as $index => $row){
             if (!$areColumnSet){
-                echo "<div class='tracks-cont'>";
+                echo "<div class='tracks-header-cont'>";
                 foreach ($row as $colname => $cell){ 
                     echo "<span class='col-fields'>$colname</span>";  
             }
             echo "</div>";
             $areColumnSet = true;
         }
-            echo "<div class='track-cont'>";
-            echo "Row: $index";
+            echo "<div class='tracks-cont'>";
+            // echo "Row: $index";
             //print_r($index);
             foreach ($row as $colname => $cell){
                 echo "<span class='track-cell'>$cell</span>";
             }
             echo "</div>";
         }
+        require "../src/template/footer.php";
     }
 }

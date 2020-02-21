@@ -1,5 +1,5 @@
 <?php
-class Model //otvechaet za bazu dannih, shablon dla zapisi dopolnitelnih zaprosov
+class Model //otvechaet za bazu dannih,logiku, shablon dla zapisi dopolnitelnih zaprosov
 {   
     const MODELNAME = "Our data store and methods";
     //no need be public connection
@@ -19,18 +19,12 @@ class Model //otvechaet za bazu dannih, shablon dla zapisi dopolnitelnih zaproso
     }
     public function getSongs($songname = null)
     {
-        if ($songname) {
-            $songname = "%$songname%";
-            $stmt = $this->conn->prepare("SELECT * FROM tracks WHERE name LIKE (:songname)");
-            $stmt->bindParam(':songname', $songname);
-            //NOT SAFE!! https://xkcd.com/327/
-            // $stmt = $this->conn->prepare("SELECT * FROM tracks WHERE name LIKE '%$songname%'");
+     if($songname)  {
+        $stmt = $this->conn->prepare ("SELECT*FROM tracks WHERE name LIKE '%$songname%'");
+     } else {
+        $stmt = $this->conn->prepare ("SELECT*FROM tracks");
+     }
 
-        } else {
-            $stmt = $this->conn->prepare("SELECT * FROM tracks");
-        }
-
-$stmt = $this->conn->prepare ("SELECT*FROM tracks");
 //prepare goes here
 $stmt->execute();//zapros vipolnitj i ustanovitj rezhim i rspechatatj
 //rezhim
@@ -38,6 +32,5 @@ $stmt->setFetchMode(PDO::FETCH_ASSOC);
 $allRows = $stmt->fetchAll();
 //var_dump($allRows);
 $this->view->printSongs($allRows);
-
 }
 }

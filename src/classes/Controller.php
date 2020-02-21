@@ -1,16 +1,42 @@
 <?php
-class Controller {
+class Controller{
     private $model;
-    public function __construct (Model $odel){  
-    
-    $this->model = $model;
+
+    public function __construct(Model $model){
+        $this->model = $model;
     }
-    public function route (){
+
+  /*   private function getReq()
+    {
         if (isset($_GET['songname'])) {
-            $this ->model ->getSongs($_GET['mydate']);
-        }else {
-            
+            $this->model->getSongs($_GET['songname']);
+        } else {
+            $this->model->getSongs();
         }
-        $this ->model ->getSongs();
+    }
+
+    private function postReq()
+    {
+        // echo "POST Request<hr>";
+        // var_dump($_POST);
+        $this->model->addSongs();
+    }*/
+
+    public function route()
+    {   if (isset($_GET['songname'])){
+        $this->model->getSongs(($_GET['songname']));
+    } else {
+        $this->model->getSongs(); 
+    }
+   
+
+        /* if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+            $this->getReq();
+        }
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $this->postReq();
+        }
+ */
     }
 }
+ 
