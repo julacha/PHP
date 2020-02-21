@@ -30,11 +30,19 @@ class Model //otvechaet za bazu dannih,logiku, shablon dla zapisi dopolnitelnih 
      }
 
 //prepare goes here
-$stmt->execute();//zapros vipolnitj i ustanovitj rezhim i rspechatatj
+$stmt->execute();//zapros vipolnitj i ustanovitj rezhim i raspechatatj
 //rezhim
 $stmt->setFetchMode(PDO::FETCH_ASSOC);
 $allRows = $stmt->fetchAll();
 //var_dump($allRows);
 $this->view->printSongs($allRows);
+}
+
+public function addSongs(){
+    $stmt = $this->conn->prepare ("INSERT INTO tracks (name, user_id) VALUES (:songname,0)");
+    $stmt->bindParam(':songname',$_POST ['songname']);
+
+    $stmt->execute();
+    $this->getSongs();
 }
 }
