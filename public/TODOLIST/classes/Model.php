@@ -1,6 +1,6 @@
 <?php
 class Model{   
-    public $conn = null;
+    private $conn = null;
     //private $view;//vizivaem
 
     public function __construct($config) {
@@ -12,8 +12,14 @@ class Model{
         $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "<hr>Connected Successfully!<hr>";
     }
-    public function getTask(id = null){
-        $
-    }
+        public function addSongs(){
+            $stmt = $this->conn->prepare ("INSERT INTO tracks (name, artist, user_id) VALUES (:songname,:artist,1)");
+            //$stmt->bindParam(':songname',$_POST ['songname']);
+            //$stmt->bindParam(':artist',$_POST ['artist']);
+            //$stmt->execute();
+            //$this->getSongs();
+        }
 
-}
+    }
+  
+
