@@ -20,7 +20,7 @@ class View{
     <button type="submit" class="task_btn" name="submit">Add Task</button>
     </form>
 
-    <table>
+<!--     <table>
     <thead>
     <tr>
     <th>Nr</th>
@@ -37,7 +37,7 @@ class View{
     </td>
     </tr>
     </tbody>
-    </table>
+    </table> -->
 
 </div>
 </html>
