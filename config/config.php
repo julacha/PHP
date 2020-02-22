@@ -2,7 +2,7 @@
 //in real life we DO NOT commit sensitive config info to public git repo!
 $config = [
     "server" => "localhost",
-    "db" => "music",
+    "db" => "music1",
     "user" => "root",
     "pw" => "",
 ];
