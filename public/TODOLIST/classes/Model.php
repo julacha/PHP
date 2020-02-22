@@ -14,7 +14,7 @@ class Model{
         $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "<hr>Connected Successfully!<hr>";
     }
-    public function addTask(){
+    public function addTask($task){
         $stmt = $this->conn->prepare ("INSERT INTO tasks (task) VALUES (:task)");
         $stmt->bindParam(':task',$_POST ['task']);
         $stmt->execute();
