@@ -1,15 +1,6 @@
-<?php
-class View{
-    public function render(){
-        //todo print all of the page.
-    }
-    public function printTasks($task){
-    require_once "../head.php";
-    require_once "../body.php";
-
-    }
-}?>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<body>
 <h1>TODO LIST</h1>
 <div class="tasks_cont">
  <form action="index.php" method="POST">
@@ -18,4 +9,5 @@ class View{
     <button type="submit" class="task_btn" name="submit">Add Task</button>
     </form>
 </div>
+</body>
 </html>

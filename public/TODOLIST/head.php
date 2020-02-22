@@ -8,7 +8,4 @@
     <title>TODO List</title>
 
 </head>
-<body>
-    
-</body>
 </html>
