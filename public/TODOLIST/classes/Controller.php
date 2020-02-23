@@ -7,12 +7,12 @@ class Controller{
     }
 
    //?
-    private function postReq()
+ /*    private function postReq()
     {
          //echo "POST Request<hr>";
          //var_dump($_POST);
         $this->model->addTask();
-    }
+    } */
 /* 
  if (isset($_POST['submit'])) {
     $this->model->addTask($_POST['task']);

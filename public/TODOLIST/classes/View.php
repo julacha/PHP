@@ -17,7 +17,7 @@ class View{
  <form action="index.php" method="POST">
     <label for="task">Task</label>
     <input type="text" name="task" class="task_input">
-    <button type="submit" class="task_btn" name="submit">Add Task</button>
+    <button type="submit" class="task_btn" name="sendTask">Add Task</button>
     </form>
 
 <!--     <table>

@@ -14,23 +14,22 @@ class Model{
         $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "<hr>Connected Successfully!<hr>";
     }
-//hocu sdelatj ctobi vpisivalsa v formu s ekrana
-/*  $stmt = $this->conn->prepare ("SELECT*FROM tasks");
-    $stmt->execute();
+    //v okne polzovatelj vvodit zadachu
+  /*   $stmt = $this->conn->prepare ("SELECT*FROM tasks");
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
-    $allRows = $stmt->fetchAll(); */
-    //var_dump($allRows);
-    //$this->view->printSongs($allRows);
-//zadachi zapisivajutsa v bazu dannih
+    $allRows = $stmt->fetchAll();
+    $this->view->printTasks($allRows);
+    if($task == ""){
+        echo "New task";
+        exit();
+    } */
+    //zadachi zapisivajutsa v bazu dannih
     public function addTask($task){
         $stmt = $this->conn->prepare ("INSERT INTO tasks (task) VALUES (:task)");
         $stmt->bindParam(':task',$_POST ['task']);
         $stmt->execute();
     }
 }
-   /*  $task = $_POST['task'];
-    if($task == ""){
-        echo "New task";
-        exit();
-    } */
+
+
   
