@@ -7,8 +7,7 @@ class View{
     public function printTasks($task){
     require_once "../TODOLIST/templates/head.php";
     require_once "../TODOLIST/templates/body.php";
-
-
+      
     }
     }
 

@@ -15,22 +15,7 @@ class Model{
         echo "<hr>Connected Successfully!<hr>";
     }
 
-     //zadachi zapisivajutsa v bazu dannih
-    if (isset($_POST['submit'])) {
-        $this->model->addTask($_POST['task']);
-        } else {
-        $this->model->addTask();
-        }
-    //zadachi zapisivajutsa v bazu dannih
-    public function addTask($task){
-        $stmt = $this->conn->prepare ("INSERT INTO tasks (task) VALUES (:task)");
-        $stmt->bindParam(':task',$_POST ['task']);
-        $stmt->execute();
-        $stmt->setFetchMode(PDO::FETCH_ASSOC);
-        //$Rows = $stmt->fetchAll();
-        $this->view->printTasks($task);
-
-//v okne polzovatelj vvodit zadachu v okno
+    //v okne polzovatelj vvodit zadachu v okno
   /*$stmt = $this->conn->prepare ("SELECT*FROM tasks");
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
     $allRows = $stmt->fetchAll();
@@ -39,9 +24,19 @@ class Model{
         echo "New task";
         exit();
     } */
-
-
-
+  /*   if (isset($_POST['submit'])) {
+        $this->model->addTask($_POST['task']);
+        } else {
+        $this->model->addTask();
+        } */
+    //zadachi zapisivajutsa v bazu dannih
+    public function addTask($task){
+        $stmt = $this->conn->prepare ("INSERT INTO tasks (task) VALUES (:task)");
+        $stmt->bindParam(':task',$_POST ['task']);
+        $stmt->execute();
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        //$Rows = $stmt->fetchAll();
+        $this->view->printTasks($task);
     }
 }
 

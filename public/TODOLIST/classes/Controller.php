@@ -5,17 +5,7 @@ class Controller{
     public function __construct(Model $model){
         $this->model = $model;
     }
-
-  private function postReq()
-    {
-         //echo "POST Request<hr>";
-         //var_dump($_POST);
+  private function postReq()    {
         $this->model->addTask();
     } 
-
-/* if (isset($_POST['submit'])) {
-    $this->model->addTask($_POST['task']);
-    } else {
-    $this->model->addTask();
-    } */
 }
