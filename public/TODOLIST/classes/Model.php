@@ -15,13 +15,13 @@ class Model{
         echo "<hr>Connected Successfully!<hr>";
     }
 //hocu sdelatj ctobi vpisivalsa v formu s ekrana
-    $stmt = $this->conn->prepare ("SELECT*FROM tasks");
+/*  $stmt = $this->conn->prepare ("SELECT*FROM tasks");
     $stmt->execute();
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
-    $allRows = $stmt->fetchAll();
+    $allRows = $stmt->fetchAll(); */
     //var_dump($allRows);
-    $this->view->printSongs($allRows);
-//zadachi vpisivajutsa v bazu dannih
+    //$this->view->printSongs($allRows);
+//zadachi zapisivajutsa v bazu dannih
     public function addTask($task){
         $stmt = $this->conn->prepare ("INSERT INTO tasks (task) VALUES (:task)");
         $stmt->bindParam(':task',$_POST ['task']);
