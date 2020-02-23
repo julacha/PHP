@@ -13,14 +13,15 @@ class View{
 ?>
 <html>
 <h1>TODO LIST</h1>
-<div class="tasks_cont">
+<div class="tasks_img">
+</div>
  <form action="index.php" method="POST">
     <label for="task">Task</label>
     <input type="text" name="task" class="task_input">
     <button type="submit" class="task_btn" name="sendTask">Add Task</button>
-    </form>
+</form>
 
-<!--     <table>
+ <table>
     <thead>
     <tr>
     <th>Nr</th>
@@ -37,7 +38,7 @@ class View{
     </td>
     </tr>
     </tbody>
-    </table> -->
+    </table> 
 
 </div>
 </html>

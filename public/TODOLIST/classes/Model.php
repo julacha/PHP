@@ -23,6 +23,10 @@ class Model{
         echo "New task";
         exit();
     } */
+  /*  if(isset($_POST['sendTask'])){
+        $task = $_POST['task'];
+  */
+
     //zadachi zapisivajutsa v bazu dannih
     public function addTask($task){
         $stmt = $this->conn->prepare ("INSERT INTO tasks (task) VALUES (:task)");
