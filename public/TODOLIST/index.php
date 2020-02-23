@@ -8,5 +8,5 @@ $view = new View();
 $model = new Model($config,$view);//podkluchaemsa
 $controller = new Controller ($model);
 //$controller->route();//vizov cherez funkciju */
-
+$model ->addTask($task=null);
 
