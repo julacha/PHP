@@ -13,7 +13,7 @@ class Controller{
         $this->model->addTask();
     } 
 
-/*  if (isset($_POST['sendTask'])) {
+/* if (isset($_POST['submit'])) {
     $this->model->addTask($_POST['task']);
     } else {
     $this->model->addTask();
