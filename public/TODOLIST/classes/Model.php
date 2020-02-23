@@ -14,8 +14,9 @@ class Model{
         $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "<hr>Connected Successfully!<hr>";
     }
-    //v okne polzovatelj vvodit zadachu
-  /*   $stmt = $this->conn->prepare ("SELECT*FROM tasks");
+
+    //v okne polzovatelj vvodit zadachu v okno
+  /*$stmt = $this->conn->prepare ("SELECT*FROM tasks");
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
     $allRows = $stmt->fetchAll();
     $this->view->printTasks($allRows);
@@ -23,9 +24,6 @@ class Model{
         echo "New task";
         exit();
     } */
-  /*  if(isset($_POST['sendTask'])){
-        $task = $_POST['task'];
-  */
 
     //zadachi zapisivajutsa v bazu dannih
     public function addTask($task){
