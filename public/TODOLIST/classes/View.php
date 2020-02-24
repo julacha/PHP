@@ -4,11 +4,12 @@ class View{
         //todo print all of the page.
     }
   
-    public function printTasks($tasks){
+    public function printTasks($task){
     require_once "../TODOLIST/templates/head.php";
     require_once "../TODOLIST/templates/body.php";
-    
-    while ($row = $stmt->fetchAll()){ 
+    foreach($task as $row){
+    //while ($row = $stmt->fetchAll()){ 
+        print_r($row);
     echo "<tr>";
     echo "<td> $row ['id'] </td>";
     echo "<td class='task'>$row ['task']</td> ";

@@ -33,8 +33,10 @@ class Model{
 
         //v okne polzovatelj vvodit zadachu, zadacha vpisivaetsa v bd i vivoditsa vnizu formi
         $stmt = $this->conn->prepare ("SELECT *FROM 'tasks'");
+        //$stmt->execute();
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $row = $stmt->fetchAll();
+        //var_dump($row);
         $this->view->printTasks($task);
        
 
