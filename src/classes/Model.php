@@ -39,9 +39,11 @@ $this->view->printSongs($allRows);
 }
 
 public function addSongs(){
-    $stmt = $this->conn->prepare ("INSERT INTO tracks (name, artist, user_id) VALUES (:songname,:artist,1)");
+    $stmt = $this->conn->prepare ("INSERT INTO tracks (name, artist, album, length, user_id) VALUES (:songname,:artist,album, length,1)");
     $stmt->bindParam(':songname',$_POST ['songname']);
     $stmt->bindParam(':artist',$_POST ['artist']);
+    $stmt->bindParam(':album',$_POST ['album']);
+    $stmt->bindParam(':length',$_POST ['songlen']);
     $stmt->execute();
     $this->getSongs();
 }
