@@ -7,7 +7,7 @@ class View{
     public function printTasks($todo){
     require_once "../TODOLIST/templates/head.php";
     require_once "../TODOLIST/templates/body.php";
-   var_dump($todo);
+  print_r($todo);
     }
     //foreach ($task as $row){
 /*   while($row = $stmt->fetchAll())

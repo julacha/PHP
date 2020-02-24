@@ -24,7 +24,7 @@
     <tbody>
     <tr>
     <td>1</td>
-    <td class="task">The firt task</td>
+    <td class="task">The first task</td>
     <td class="delete">
     <a href="#">x</a>
     </td>

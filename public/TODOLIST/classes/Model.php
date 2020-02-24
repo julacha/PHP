@@ -23,15 +23,14 @@ class Model{
         $this->view->printTasks($task);
     }
 
- public function getTask(){
+ public function getTask($task=null){
         //v okne polzovatelj vvodit zadachu, zadacha vpisivaetsa v bd i vivoditsa vnizu formi
         $stmt = $this->conn->prepare ("SELECT *FROM tasks");
-        //$stmt->bindParam(':id',$_POST ['id']); 
-        //$stmt->bindParam(':task',$_POST ['task']);
+        //$stmt->bindParam(':id',$_GET ['id']); 
+        //$stmt->bindParam(':task',$_GET ['task']);
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $result = $stmt->fetchAll();
         print_r($result);
-        $this->view->printTasks($result);
         $stmt->execute(); 
 }
 }
