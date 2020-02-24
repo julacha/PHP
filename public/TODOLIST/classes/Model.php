@@ -32,19 +32,21 @@ class Model{
         $this->view->printTasks($task);
 
         //v okne polzovatelj vvodit zadachu, zadacha vpisivaetsa v bd i vivoditsa vnizu formi
-        $stmt = $this->conn->prepare ("SELECT *FROM 'tasks'");
-        
-        //$stmt->execute();
+        $stmt = $this->conn->prepare ("SELECT *FROM tasks");
+        $stmt->bindParam(':id',$_POST ['id']); 
+        $stmt->bindParam(':task',$_POST ['task']);
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $AllRows = $stmt->fetchAll();
         $this->view->printTasks($AllRows);
-    foreach($row = $stmt->fetchAll()){
+        $stmt->execute();
+        var_dump($AllRows);
+    /* foreach($AllRows as $row){
         echo "id" . $row [id];
         echo "task" . $row [task]; 
-        }
+        } */
     }
     }
-        //var_dump($AllRows);
+    
         //$this->view->printTasks($AllRows);
       /*   if ($result->num_rows > 0){
             while ($row = $result ->fetch_assoc()){
