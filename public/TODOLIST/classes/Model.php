@@ -30,11 +30,12 @@ class Model{
         $stmt->bindParam(':task',$_POST ['task']);
         $stmt->execute();
         $this->view->printTasks($task);
-
+    }
+    public function getTask($task){
         //v okne polzovatelj vvodit zadachu, zadacha vpisivaetsa v bd i vivoditsa vnizu formi
         $stmt = $this->conn->prepare ("SELECT *FROM tasks");
-        $stmt->bindParam(':id',$_POST ['id']); 
-        $stmt->bindParam(':task',$_POST ['task']);
+        //$stmt->bindParam(':id',$_POST ['id']); 
+        //$stmt->bindParam(':task',$_POST ['task']);
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $AllRows = $stmt->fetchAll();
         $this->view->printTasks($AllRows);
@@ -42,10 +43,10 @@ class Model{
         var_dump($AllRows);
     /* foreach($AllRows as $row){
         echo "id" . $row [id];
-        echo "task" . $row [task]; 
-        } */
+        echo "task" . $row [task]; */
+    } 
     }
-    }
+    
     
         //$this->view->printTasks($AllRows);
       /*   if ($result->num_rows > 0){
