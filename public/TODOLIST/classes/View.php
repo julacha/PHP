@@ -22,8 +22,12 @@ $areColumnSet = true;
     echo "<div class='task_cont'>";
  
     foreach ($row as $colname => $cell){
-        echo "<span class='task-cell'>$cell</span>";
+        echo "<span class='task-cell'>$cell</span>";   
     }
+    echo "<form action='index.php' method='POST'>";
+    $rowid = $row['id'];
+    echo "<button type='submit' name='delBtn' value='$rowid'>Delete</button>";
+    echo "</form>";
     echo "</div>";
 }
 echo "</div>";

@@ -35,7 +35,15 @@ class Model{
         $this->view->printTasks($allRows);
     
 }
+
+public function deleteTask(){
+    $stmt = $this->conn->prepare("DELETE FROM tasks WHERE id = (:taskid)");
+    $stmt->bindParam(':taskid',$_POST ['delBtn']);
+    $stmt->execute();
+    //$this->getTask();
 }
+}
+
 
  
 

@@ -5,10 +5,14 @@ class Controller{
     public function __construct(Model $model){
         $this->model = $model;
     }
-  private function postReq()    {
-        $this->model->addTask();
-    } 
 
+  private function postReq()    {
+    if (isset($_POST['addBtn'])) {
+        $this->model->addTask();
+    } else {
+        $this->model->deleteTask();
+    }
+}
     private function getReq()
     {
         if (isset($_GET['task'])) {
