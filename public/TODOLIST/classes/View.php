@@ -7,8 +7,11 @@ class View{
     public function printTasks($todo){
     require_once "../TODOLIST/templates/head.php";
     require_once "../TODOLIST/templates/body.php";
-  print_r($todo);
-    }
+
+var_dump($todo);
+/*foreach ($todo as $tsk){
+  print_r($tsk);
+    } */
     //foreach ($task as $row){
 /*   while($row = $stmt->fetchAll())
         echo "id" . $row [id];
@@ -32,3 +35,4 @@ class View{
             echo "0 result";     
         } */
 } 
+}

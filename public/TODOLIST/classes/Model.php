@@ -1,6 +1,6 @@
 <?php
 class Model{  
-    const MODELNAME = "Our data store and methods";
+   
     private $conn = null;
     private $view;
 //podklucilasj k baze
@@ -16,22 +16,24 @@ class Model{
     }
 
      //zadachi zapisivajutsa v bazu dannih
-    public function addTask($task){
+    public function addTask($task=null){
         $stmt = $this->conn->prepare ("INSERT INTO tasks (task) VALUES (:task)");
         $stmt->bindParam(':task',$_POST ['task']);
         $stmt->execute();
         $this->view->printTasks($task);
     }
 
- public function getTask($task=null){
+ public function getTask(){
         //v okne polzovatelj vvodit zadachu, zadacha vpisivaetsa v bd i vivoditsa vnizu formi
         $stmt = $this->conn->prepare ("SELECT *FROM tasks");
-        //$stmt->bindParam(':id',$_GET ['id']); 
-        //$stmt->bindParam(':task',$_GET ['task']);
+        //$stmt->bindParam(':id', ['id']); 
+        //$stmt->bindParam(':task',['task']);
+        $stmt->execute();
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
-        $result = $stmt->fetchAll();
-        print_r($result);
-        $stmt->execute(); 
+        $allRows = $stmt->fetchAll();
+        var_dump($allRows);
+      
+    
 }
 }
 
