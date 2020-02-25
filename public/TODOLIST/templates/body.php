@@ -13,7 +13,7 @@
 </form>
 </div>
 </div>
-<table>
+<!-- <table>
     <thead>
     <tr>
     <th>Nr</th>
@@ -31,5 +31,5 @@
     </tr>
     </tbody>
 </table> 
-</body>
+</body> -->
 </html>

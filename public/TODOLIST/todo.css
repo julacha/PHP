@@ -1,5 +1,6 @@
 body{
-    background-color: cadetblue;
+    font-family: 'Montserrat';
+    font-size: 20px;
 }
 .outer_container{
     width: 50%;
@@ -36,7 +37,7 @@ margin-bottom: 20px;
 }
 
 .task_btn{
-    width: 100px;
+    width: 25%;
     height: 40px;
     background: blueviolet;
     color: chocolate;
@@ -44,38 +45,30 @@ margin-bottom: 20px;
     border-radius: 5px;
     border: 2px solid black;
     }
-
-table{
+.todo{
     width: 50%;
-    margin:30px auto;
-    border-collapse: collapse;
+    margin:30px auto;    
+}
+.task_header{
+
 }
 
-tr{
-    border-bottom: 1px solid black;
+.todo_header{
+
 }
 
-th{
-    font-size: 19px;
-    color: black;
+.task_cont{
+padding: 10px;
+display: flex;
 }
 
-th, td {
-    border: none;
-    height: 30px;
-    padding: 2px;
-}
-
-tr:hover{
+.task_cont:hover{
     background: cornflowerblue;
 }
-.task{
-    text-align: left;
-}
-.delete{
-    text-align: center;
-}
 
+.task_cell{
+padding-left: 20px;
+}
 .delete a{
     color:white;
     background: crimson;

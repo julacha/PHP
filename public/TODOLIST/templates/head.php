@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="todo.css"> 
     <script src="todo.js" defer></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Simonetta&display=swap" rel="stylesheet">
     <title>TODO List</title>
 
 </head>
