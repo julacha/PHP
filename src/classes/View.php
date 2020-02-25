@@ -22,7 +22,7 @@ class View{
             if (!$areColumnSet){
                 echo "<div class='tracks-header-cont'>";
                 foreach ($row as $colname => $cell){ 
-                    echo "<span class='col-fields'>$colname</span>";  
+                echo "<span class='col-fields'>$colname</span>";  
             }
             echo "</div>";
             $areColumnSet = true;

@@ -20,7 +20,7 @@ class Model{
         $stmt = $this->conn->prepare ("INSERT INTO tasks (task) VALUES (:task)");
         $stmt->bindParam(':task',$_POST ['task']);
         $stmt->execute();
-        $this->view->printTasks($task);
+        //$this->view->printTasks($task);
     }
 
  public function getTask(){
@@ -31,8 +31,8 @@ class Model{
         $stmt->execute();
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $allRows = $stmt->fetchAll();
-        var_dump($allRows);
-      
+        //var_dump($allRows);
+        $this->view->printTasks($allRows);
     
 }
 }

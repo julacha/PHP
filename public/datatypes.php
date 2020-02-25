@@ -9,7 +9,6 @@ $myname = "cat";
 var_dump($myname);
 $needle = "c";
 $pos = stripos($myname,$needle);
-echo "<hr>$needle is first found in ('$myname') at position $pos";
 echo "<hr>";
 for ($i = 0; $i<5; $i++) {
     echo "<p id = 'p$i'> Some text for P $i</p>";

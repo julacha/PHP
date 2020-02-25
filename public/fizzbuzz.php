@@ -20,4 +20,3 @@ for ($i = 1; $i <= 100; $i++) {
 }
 echo "</ol>";
 require "../src/template/footer.php";
-© 2020 GitHub, Inc.
