@@ -20,10 +20,12 @@ foreach ($todo as $index => $row){
 $areColumnSet = true;
 }*/
     echo "<div class='task_cont'>";
- 
+    //echo "Row: $index;
+
     foreach ($row as $colname => $cell){
         echo "<span class='task-cell'>$cell</span>";   
     }
+
     echo "<form action='index.php' method='POST'>";
     $rowid = $row['id'];
     echo "<button type='submit' name='delBtn' value='$rowid'>Delete</button>";

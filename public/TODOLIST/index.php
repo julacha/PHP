@@ -7,7 +7,7 @@ require_once "classes/Controller.php";
 $view = new View();
 $model = new Model($config,$view);//podkluchaemsa
 $controller = new Controller ($model);
-$controller->route();//vizov cherez funkciju */
+$controller->route();//vizov cherez funkciju 
 //$model ->addTask();
 $model ->getTask();
 
