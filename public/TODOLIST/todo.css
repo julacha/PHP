@@ -13,18 +13,9 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     height: 150px;
-    border-radius: 5px;  
-    opacity: 0.8;
+    border-radius: 5px;
 }
 
-.tasks_cont{
-    margin-top: 5px;
-    margin-bottom: 30px;
-    border-radius: 5px;  
-    padding: 10px; 
-    background-color: wheat;
-    border-radius: 5px;   
-}
 .task_input{
 width:73%;
 border-radius: 5px;  
@@ -38,6 +29,10 @@ margin-bottom: 20px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: wheat;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;   
     
 }
 .task_btn{
@@ -55,21 +50,15 @@ margin-bottom: 20px;
 }
 
 .task_cont{
-padding: 10px;
-display: flex;
+padding: 15px;
+margin-bottom:10px;
+background: #fcfcfc;
+border: 1px solid silver;
+border-radius: 5px;
+display:flex;
+justify-content: space-between;
 }
-
 .task_cont:hover{
-    background: cornflowerblue;
+    background: #e5e5e5;
 }
 
-.task_cell{
-padding-left: 20px;
-}
-.delete a{
-    color:white;
-    background: crimson;
-    padding: 1px 6px;
-    border-radius: 3px;
-    text-decoration: none;
-}
