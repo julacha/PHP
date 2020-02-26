@@ -9,11 +9,12 @@ body{
 }
 
 .tasks_img{
-    background-image: url(/TODOLIST/Images/To-Do-List-Heading.png);
+    background-image: url(/TODOLIST/Images/img.png);
     background-size: cover;
     background-repeat: no-repeat;
     height: 150px;
     border-radius: 5px;  
+    opacity: 0.8;
 }
 
 .tasks_cont{
