@@ -27,8 +27,10 @@ $areColumnSet = true;
     }
 
     echo "<form action='index.php' method='POST'>";
-    $rowid = $row['id'];
+   $rowid = $row['id'];
     echo "<button type='submit' name='delBtn' value='$rowid'>Delete</button>";
+    echo "<i class='fa fa-pencil-square-o' aria-hidden='true'></i>";
+    echo "<i class='fa fa-times' aria-hidden='true'></i>";
     echo "</form>";
     echo "</div>";
 }

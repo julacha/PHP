@@ -6,6 +6,7 @@
     <title>Document</title>
    <link rel="stylesheet" href="styles/style.css"> 
     <script src="scripts/main.js" defer></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     
 
 </head>

@@ -18,5 +18,7 @@ for ($i = 1; $i <= 100; $i++) {
     }
 
 }
-echo "</ol>";
+echo "<i class='fa fa-pencil-square-o' aria-hidden='true'></i>";
+echo "<i class='fa fa-times' aria-hidden='true'></i>";
+
 require "../src/template/footer.php";

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="todo.css"> 
     <script src="todo.js" defer></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Simonetta&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <title>TODO List</title>
 
 </head>

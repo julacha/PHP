@@ -9,12 +9,10 @@ body{
 }
 
 .tasks_img{
-    height: 150px;
-    background-image: url(/TODOLIST/Images/img3.png);
+    background-image: url(/TODOLIST/Images/To-Do-List-Heading.png);
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 150px;
-   
+    height: 150px;
     border-radius: 5px;  
 }
 
@@ -53,13 +51,6 @@ margin-bottom: 20px;
 .todo{
     width: 50%;
     margin:30px auto;    
-}
-.task_header{
-
-}
-
-.todo_header{
-
 }
 
 .task_cont{
