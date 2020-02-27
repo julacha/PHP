@@ -20,7 +20,7 @@ class Model{
         $stmt = $this->conn->prepare ("INSERT INTO tasks (task) VALUES (:task)");
         $stmt->bindParam(':task',$_POST ['task']);
         $stmt->execute();
-        //$this->view->printTasks($task);
+        //$this->view->printTasks();
     }
 
  public function getTask(){
