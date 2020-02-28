@@ -21,7 +21,7 @@ $areColumnSet = true;
 }*/
     echo "<div class='task_cont'>";
     //echo "Row: $index;
-    echo "$index";
+    //echo "$index";
     echo "<form action='index.php' method='POST'>";
     foreach ($row as $colname => $cell){
         switch ($colname){
@@ -33,15 +33,17 @@ $areColumnSet = true;
     default:
         echo "<span class='task-cell'>$cell</span>";
 break;       
-
 }
 }
-    $rowid = $row['id'];
-    echo "<i class='fa fa-pencil-square-o' aria-hidden='true'></i>";
-    echo "<i class='fa fa-times' aria-hidden='true'></i>";
-echo "<button type='submit' name='updateBtn' value='$rowid'>Edit</button>";
-echo "<button type='submit' name='delBtn' value='$rowid'>Delete</button>";
 echo "</form>";
+    $rowid = $row['id'];
+echo "<button type='submit' name='updateBtn' value='$rowid'><i class='far fa-edit'></i></button>";
+echo "<br>";
+echo "<button type='submit' name='delBtn' value='$rowid'><i class='far fa-minus-square'></i></button>";
+
+
+
+/* echo "</form>"; */
 echo "</div>";
 }
 echo "</div>";

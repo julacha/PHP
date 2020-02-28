@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="todo.css">
     <script src="todo.js" defer></script>
     <link href="https://fonts.googleapis.com/css?family=Forum|Pangolin|Trocchi&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/446d9a579a.js" crossorigin="anonymous"></script>
     <title>TODO List</title>
 </head>
 </html>

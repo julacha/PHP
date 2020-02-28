@@ -2,6 +2,6 @@ const dateElement = document.getElementById("date");
 
 const today = new Date();
 
-const options = {weekay:'long', month:'short', day:'numeric'};
-dateElement.innerHTL = today.toLocaleDateString("en-US", options);
+const options = {weekday:'long', month:'long', day:'numeric'};
+dateElement.innerHTML = today.toLocaleDateString("en-GB", options);
 

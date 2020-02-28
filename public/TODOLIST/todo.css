@@ -55,15 +55,22 @@ font-size: 15px;
     
 }
 
+i{
+    font-size: 25px;
+}
 .update_inp{
 outline: none;
 border: none;
 border-radius: 5px;
 padding: 5px;
 display: flex;
-flex-basis:auto;
 font-family: 'Pangolin';
 font-size: 15px;
+}
+#date{
+    margin:10px;
+    color: saddlebrown;
+    font-size: 15px;
 }
 .todo{
     width: 50%;
@@ -77,8 +84,10 @@ background: #fcfcfc;
 border: 1px solid silver;
 border-radius: 5px;
 display:flex;
+flex-direction: row;
+justify-content: space-around;
 }
 .task_cont:hover{
-    background: #e5e5e5;
+    background: seashell;
 }
 
