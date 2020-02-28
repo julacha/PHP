@@ -26,7 +26,7 @@ $areColumnSet = true;
     echo "<form action='index.php' method='POST'>";
     foreach ($row as $colname => $cell){
         if ($colname == "task"){
-            echo "<input type='text' name='task' class='update_inp' value='$cell'></input>";
+            echo "<input type='text' name='task_update' class='update_inp' value='$cell'></input>";
     } else {
         echo "<span class='task-cell'>$cell</span>";   
     }

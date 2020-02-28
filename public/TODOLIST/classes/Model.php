@@ -33,7 +33,6 @@ class Model{
         $allRows = $stmt->fetchAll();
         //var_dump($allRows);
         $this->view->printTasks($allRows);
-        //echo $allRows ['task'];
     
 }
 
@@ -43,6 +42,14 @@ public function deleteTask(){
     $stmt->execute();
     //$this->getTask();
 }
+
+public function updateTask(){
+    $stmt = $this->conn->prepare("UPDATE tasks SET task = (:taskname) WHERE id = (:taskid)");
+    $stmt->bindParam(':taskid',$_POST ['updateBtn']);
+    $stmt->bindParam(':taskname',$_POST ['task_update']);
+    $stmt->execute();
+    //$this->addTask();
+} 
 }
 
 
