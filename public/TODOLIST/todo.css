@@ -1,12 +1,12 @@
 
 .outer_container{
-    width: 50%;
+    width: 40%;
     margin-left: auto;
     margin-right: auto;
 }
 
 .tasks_img{
-    background-image: url(/TODOLIST/Images/img.png);
+    background-image: url(/TODOLIST/Images/bimg3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 170px;
@@ -39,6 +39,11 @@ font-size: 15px;
     font-weight:700;
     font-size: 20px;
 }
+
+.two{
+    display:flex;
+    justify-content: space-around;
+}
 .task_btn{
     display:flex;
     width: 25%;
@@ -52,20 +57,32 @@ font-size: 15px;
     font-family: 'Trocchi';
     font-weight:700;
     font-size: 20px;
-    
 }
 
 i{
-    font-size: 25px;
+font-size: 25px;
+padding: 5px;
 }
+
 .update_inp{
 outline: none;
 border: none;
 border-radius: 5px;
 padding: 5px;
-display: flex;
+width:73%;
 font-family: 'Pangolin';
 font-size: 15px;
+}
+.btnone{
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.btntwo{
+    outline: none;
+    border: none; 
+    background: transparent;
 }
 #date{
     margin:10px;
@@ -73,21 +90,21 @@ font-size: 15px;
     font-size: 15px;
 }
 .todo{
-    width: 50%;
-    margin:30px auto;    
+    width: 40%;
+    margin:5px auto;    
 } 
 
 .task_cont{
-padding: 15px;
-margin-bottom:10px;
+padding: 10px;
+margin:5px;
 background: #fcfcfc;
 border: 1px solid silver;
 border-radius: 5px;
 display:flex;
-flex-direction: row;
+align-items: center;
 justify-content: space-around;
 }
 .task_cont:hover{
-    background: seashell;
+    background: #fcec92;
 }
 

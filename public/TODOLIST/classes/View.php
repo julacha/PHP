@@ -22,7 +22,7 @@ $areColumnSet = true;
     echo "<div class='task_cont'>";
     //echo "Row: $index;
     //echo "$index";
-    echo "<form action='index.php' method='POST'>";
+    echo "<form class='two' action='index.php' method='POST'>";
     foreach ($row as $colname => $cell){
         switch ($colname){
     case "id":
@@ -35,15 +35,13 @@ $areColumnSet = true;
 break;       
 }
 }
-echo "</form>";
-    $rowid = $row['id'];
-echo "<button type='submit' name='updateBtn' value='$rowid'><i class='far fa-edit'></i></button>";
+$rowid = $row['id'];
+
+echo "<button class='btnone' type='submit' name='updateBtn' value='$rowid'><i class='far fa-edit'></i></button>";
 echo "<br>";
-echo "<button type='submit' name='delBtn' value='$rowid'><i class='far fa-minus-square'></i></button>";
+echo "<button class='btntwo'type='submit' name='delBtn' value='$rowid'><i class='far fa-minus-square'></i></button>";
 
-
-
-/* echo "</form>"; */
+echo "</form>";
 echo "</div>";
 }
 echo "</div>";
