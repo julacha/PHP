@@ -12,12 +12,13 @@ class Controller{
     } elseif (isset($_POST['delBtn'])){
         $this->model->deleteTask();
      } elseif (isset($_POST['updateBtn'])){
-        var_dump($_POST);
         //$this->model->updateTask();
+        var_dump($_POST);
     }else {
         var_dump($_POST);
     }
 }
+
     private function getReq()
     {
         if (isset($_GET['task'])) {

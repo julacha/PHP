@@ -29,7 +29,7 @@ margin-bottom: 20px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color:rgb(238, 216, 216);
+    background: rgb(230, 207, 176);
     margin-top: 5px;
     padding: 10px;
     border-radius: 5px;   
@@ -38,7 +38,7 @@ margin-bottom: 20px;
 .task_btn{
     width: 25%;
     height: 40px;
-    background:rgb(231, 222, 94);
+    background:rgb(253, 92, 86);
 
     padding: 5px 20px;
     border-radius: 5px;
@@ -61,5 +61,8 @@ justify-content: space-between;
 }
 .task_cont:hover{
     background: #e5e5e5;
+}
+.update_inp{
+    padding: 5px;
 }
 
