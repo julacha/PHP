@@ -9,8 +9,13 @@ class Controller{
   private function postReq()    {
     if (isset($_POST['addBtn'])) {
         $this->model->addTask();
-    } else {
+    } elseif (isset($_POST['delBtn'])){
         $this->model->deleteTask();
+     } elseif (isset($_POST['updateBtn'])){
+        var_dump($_POST);
+        //$this->model->updateTask();
+    }else {
+        var_dump($_POST);
     }
 }
     private function getReq()

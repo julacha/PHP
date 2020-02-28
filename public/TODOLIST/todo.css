@@ -29,7 +29,7 @@ margin-bottom: 20px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color:rgb(133, 125, 125);
+    background-color:rgb(238, 216, 216);
     margin-top: 5px;
     padding: 10px;
     border-radius: 5px;   
@@ -60,6 +60,6 @@ display:flex;
 justify-content: space-between;
 }
 .task_cont:hover{
-    background: rgb(231, 222, 94);
+    background: #e5e5e5;
 }
 
