@@ -20,8 +20,7 @@ foreach ($todo as $index => $row){
 $areColumnSet = true;
 }*/
     echo "<div class='task_cont'>";
-    //echo "Row: $index;
-    //echo "$index";
+    echo "$index";
     echo "<form class='two' action='index.php' method='POST'>";
     foreach ($row as $colname => $cell){
         switch ($colname){

@@ -21,6 +21,7 @@ class Model{
         $stmt->bindParam(':task',$_POST ['task']);
         $stmt->execute();
         //$this->view->printTasks();
+        $this->getTask();
     }
 
  public function getTask(){
@@ -40,7 +41,7 @@ public function deleteTask(){
     $stmt = $this->conn->prepare("DELETE FROM tasks WHERE id = (:taskid)");
     $stmt->bindParam(':taskid',$_POST ['delBtn']);
     $stmt->execute();
-    //$this->getTask();
+    $this->getTask();
 }
 
 public function updateTask(){
@@ -48,7 +49,7 @@ public function updateTask(){
     $stmt->bindParam(':taskid',$_POST ['updateBtn']);
     $stmt->bindParam(':taskname',$_POST ['task_update']);
     $stmt->execute();
-    //$this->addTask();
+    $this->getTask();
 } 
 }
 

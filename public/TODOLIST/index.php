@@ -11,5 +11,5 @@ $model = new Model($config,$view);
 $controller = new Controller ($model);
 $controller->route();
 //$model ->addTask();
-$model ->getTask();
+//$model ->getTask();
 
