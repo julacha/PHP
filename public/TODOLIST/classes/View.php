@@ -21,19 +21,24 @@ $areColumnSet = true;
 }*/
     echo "<div class='task_cont'>";
     //echo "Row: $index;
-    //echo "Task No: $index";
-    //echo "$index ['id'] = break";
+    echo "$index";
     echo "<form action='index.php' method='POST'>";
     foreach ($row as $colname => $cell){
-        if ($colname == "task"){
-            echo "<input type='text' name='task_update' class='update_inp' value='$cell'></input>";
-    } else {
-        echo "<span class='task-cell'>$cell</span>";   
-    }
+        switch ($colname){
+    case "id":
+    break;
+    case "task":
+    echo "<input type='text' name='task_update' class='update_inp' value='$cell'></input>";
+    break;
+    default:
+        echo "<span class='task-cell'>$cell</span>";
+break;       
+
+}
 }
     $rowid = $row['id'];
-    /* echo "<i class='fa fa-pencil-square-o' aria-hidden='true'></i>";
-    echo "<i class='fa fa-times' aria-hidden='true'></i>"; */
+    echo "<i class='fa fa-pencil-square-o' aria-hidden='true'></i>";
+    echo "<i class='fa fa-times' aria-hidden='true'></i>";
 echo "<button type='submit' name='updateBtn' value='$rowid'>Edit</button>";
 echo "<button type='submit' name='delBtn' value='$rowid'>Delete</button>";
 echo "</form>";

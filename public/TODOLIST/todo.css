@@ -1,7 +1,4 @@
-body{
-    font-family: 'Montserrat';
-    font-size: 20px;
-}
+
 .outer_container{
     width: 50%;
     margin-left: auto;
@@ -23,7 +20,12 @@ height: 15px;
 padding: 15px;
 border: 2px solid silver;
 margin-bottom: 20px;
+outline: none;
+border: none;
+font-family: 'Pangolin';
+font-size: 15px;
 }
+
 .one{
     display:flex;
     flex-direction: column;
@@ -33,18 +35,36 @@ margin-bottom: 20px;
     margin-top: 5px;
     padding: 10px;
     border-radius: 5px;   
-    font-family: 'Patua One';
+    font-family: 'Trocchi';
+    font-weight:700;
+    font-size: 20px;
 }
 .task_btn{
+    display:flex;
     width: 25%;
     height: 40px;
     background:rgb(253, 92, 86);
-
+    align-items: center;
+    justify-content: center;
     padding: 5px 20px;
     border-radius: 5px;
     border: 2px solid rgb(177, 129, 67);
+    font-family: 'Trocchi';
+    font-weight:700;
+    font-size: 20px;
     
-    }
+}
+
+.update_inp{
+outline: none;
+border: none;
+border-radius: 5px;
+padding: 5px;
+display: flex;
+flex-basis:auto;
+font-family: 'Pangolin';
+font-size: 15px;
+}
 .todo{
     width: 50%;
     margin:30px auto;    
@@ -57,12 +77,8 @@ background: #fcfcfc;
 border: 1px solid silver;
 border-radius: 5px;
 display:flex;
-justify-content: space-between;
 }
 .task_cont:hover{
     background: #e5e5e5;
-}
-.update_inp{
-    padding: 5px;
 }
 
