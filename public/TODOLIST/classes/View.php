@@ -1,7 +1,6 @@
 <?php
 class View{
     public function render(){
-        //todo print all of the page.
     }
   
     public function printTasks($todo){
@@ -9,18 +8,8 @@ class View{
     require_once "../TODOLIST/templates/body.php";
 //var_dump($todo);
 echo "<div class='todo'>";
-//$areColumnSet = false;
 foreach ($todo as $index => $row){
- /*    if (!$areColumnSet){
-        echo "<div class='task_header'>";
-        foreach ($row as $colname => $cell){ 
-            echo "<span class='todo_header'>$colname</span>";  
-    }
-    echo "</div>"; 
-$areColumnSet = true;
-}*/
     echo "<div class='task_cont'>";
-    echo "$index";
     echo "<form class='two' action='index.php' method='POST'>";
     foreach ($row as $colname => $cell){
         switch ($colname){

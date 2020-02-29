@@ -38,11 +38,13 @@ font-size: 15px;
     font-family: 'Trocchi';
     font-weight:700;
     font-size: 20px;
+    margin-block-end:5px;
 }
 
 .two{
     display:flex;
     justify-content: space-around;
+    margin-block-end:1px;
 }
 .task_btn{
     display:flex;
@@ -96,7 +98,7 @@ font-size: 15px;
 
 .task_cont{
 padding: 10px;
-margin:5px;
+margin-bottom:5px;
 background: #fcfcfc;
 border: 1px solid silver;
 border-radius: 5px;
@@ -105,6 +107,6 @@ align-items: center;
 justify-content: space-around;
 }
 .task_cont:hover{
-    background: #fcec92;
+    background:rgb(230, 207, 176);
 }
 
