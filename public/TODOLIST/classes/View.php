@@ -2,7 +2,6 @@
 class View{
     public function render(){
     }
-  
     public function printTasks($todo){
     require_once "../TODOLIST/templates/head.php";
     require_once "../TODOLIST/templates/body.php";
@@ -18,6 +17,7 @@ foreach ($todo as $index => $row){
     case "task":
     echo "<input type='text' name='task_update' class='update_inp' value='$cell'></input>";
     break;
+    
     default:
         echo "<span class='task-cell'>$cell</span>";
 break;      
@@ -28,11 +28,11 @@ $rowid = $row['id'];
 echo "<button class='btnone' type='submit' name='updateBtn' value='$rowid'><i class='far fa-edit'></i></button>";
 echo "<br>";
 echo "<button class='btntwo'type='submit' name='delBtn' value='$rowid'><i class='far fa-minus-square'></i></button>";
+echo "</form>";
 if ($cell == ''){
-    echo 'Fill the form';
+    echo "<p>'Fill the form'</p>";
     exit();
 }
-echo "</form>";
 echo "</div>";
 }
 echo "</div>";

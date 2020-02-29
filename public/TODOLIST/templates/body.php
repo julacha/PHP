@@ -3,7 +3,6 @@
 <body>
 <div class="outer_container">
 <div class="tasks_img">
-
 <!-- image -->
 </div>    
 <div class="tasks_cont">
@@ -16,4 +15,4 @@
 </div>
 </div>
 </body> 
-</html>
+</html> 

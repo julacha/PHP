@@ -41,6 +41,10 @@ font-size: 15px;
     margin-block-end:5px;
 }
 
+.one p{
+color: red;
+}
+
 .two{
     display:flex;
     justify-content: space-around;
