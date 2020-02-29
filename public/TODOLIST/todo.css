@@ -103,8 +103,8 @@ font-size: 15px;
 .task_cont{
 padding: 10px;
 margin-bottom:5px;
-background: #fcfcfc;
-border: 1px solid silver;
+background: rgb(255, 255, 250);
+border: 1px solid rgb(230, 207, 176);
 border-radius: 5px;
 display:flex;
 align-items: center;
