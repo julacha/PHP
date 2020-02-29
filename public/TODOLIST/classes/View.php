@@ -20,7 +20,7 @@ foreach ($todo as $index => $row){
     break;
     default:
         echo "<span class='task-cell'>$cell</span>";
-break;       
+break;      
 }
 }
 $rowid = $row['id'];
@@ -28,7 +28,10 @@ $rowid = $row['id'];
 echo "<button class='btnone' type='submit' name='updateBtn' value='$rowid'><i class='far fa-edit'></i></button>";
 echo "<br>";
 echo "<button class='btntwo'type='submit' name='delBtn' value='$rowid'><i class='far fa-minus-square'></i></button>";
-
+if ($cell == ''){
+    echo 'Fill the form';
+    exit();
+}
 echo "</form>";
 echo "</div>";
 }

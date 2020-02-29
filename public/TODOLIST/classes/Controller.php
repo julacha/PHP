@@ -11,7 +11,7 @@ class Controller{
         $this->model->addTask();
     } elseif (isset($_POST['delBtn'])){
         $this->model->deleteTask();
-     } elseif (isset($_POST['updateBtn'])){
+    } elseif (isset($_POST['updateBtn'])){
         $this->model->updateTask();
         //var_dump($_POST);
     }else {

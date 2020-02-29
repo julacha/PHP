@@ -22,6 +22,10 @@ class Model{
         $stmt->execute();
         //$this->view->printTasks();
         $this->getTask();
+ /*        if ($task == ''){
+            echo 'Fill the form';
+            exit();
+        } */
     }
 
  public function getTask(){
