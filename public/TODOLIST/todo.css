@@ -41,10 +41,6 @@ font-size: 15px;
     margin-block-end:5px;
 }
 
-.one p{
-color: red;
-}
-
 .two{
     display:flex;
     justify-content: space-around;
@@ -94,6 +90,7 @@ font-size: 15px;
     margin:10px;
     color: saddlebrown;
     font-size: 15px;
+    font-family: 'Open Sans';
 }
 .todo{
     width: 40%;
@@ -107,10 +104,18 @@ background: rgb(255, 255, 250);
 border: 1px solid rgb(230, 207, 176);
 border-radius: 5px;
 display:flex;
-align-items: center;
+flex-direction: column;
 justify-content: space-around;
 }
 .task_cont:hover{
     background:rgb(230, 207, 176);
 }
 
+p{
+    margin-block-start: 1px;
+    margin-block-end: 1px;
+    font-family: 'Open Sans';
+    color: saddlebrown;
+    font-size: 15px;
+    font-weight:700;
+}

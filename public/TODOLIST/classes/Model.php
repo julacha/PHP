@@ -3,7 +3,7 @@ class Model{
    
     private $conn = null;
     private $view;
-//podklucilasj k baze
+//connect to database
     public function __construct($config, View $view) {
         $this->view=$view;
         $server = $config['server'];
@@ -15,7 +15,7 @@ class Model{
         //echo "<hr>Connected Successfully!<hr>";
     }
 
-     //zadachi zapisivajutsa v bazu dannih
+     //tasks are recorded to database
     public function addTask($task=null){
    /*    if ($task == ''){
             echo 'Fill the form';
@@ -26,18 +26,12 @@ class Model{
         $stmt->execute();
         //$this->view->printTasks();
         $this->getTask();
-      /*   if ($task == ''){
-            echo 'Fill the form';
-            exit();
-        } */
     }
 
 
  public function getTask(){
-        //v okne polzovatelj vvodit zadachu, zadacha vpisivaetsa v bd i vivoditsa vnizu formi
+        //The users enters the task in the form, than task is added to database and is shown under the form
         $stmt = $this->conn->prepare ("SELECT * FROM tasks");
-        //$stmt->bindParam('id', $id); 
-        //$stmt->bindParam('task',$task);
         $stmt->execute(); 
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $allRows = $stmt->fetchAll();

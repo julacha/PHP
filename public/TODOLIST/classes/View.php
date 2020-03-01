@@ -30,7 +30,7 @@ echo "<br>";
 echo "<button class='btntwo'type='submit' name='delBtn' value='$rowid'><i class='far fa-minus-square'></i></button>";
 echo "</form>";
 if ($cell == ''){
-    echo "<p>'Fill the form'</p>";
+    echo "<p>Fill the form</p>";
     exit();
 }
 echo "</div>";
