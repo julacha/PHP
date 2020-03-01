@@ -15,7 +15,7 @@ class Model{
         //echo "<hr>Connected Successfully!<hr>";
     }
 
-     //tasks are recorded to database
+     //When the user enters the task in the form, tasks are acceped and added to database
     public function addTask($task=null){
    /*    if ($task == ''){
             echo 'Fill the form';
@@ -30,7 +30,7 @@ class Model{
 
 
  public function getTask(){
-        //The users enters the task in the form, than task is added to database and is shown under the form
+        //Task is received from database and displayed under the form
         $stmt = $this->conn->prepare ("SELECT * FROM tasks");
         $stmt->execute(); 
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
