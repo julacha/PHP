@@ -32,7 +32,7 @@ class Model{
         $allRows = $stmt->fetchAll();
         //var_dump($allRows);
         $this->view->printTasks($allRows);   
-} */
+} /*
 
 /* public function deleteTask(){
     $stmt = $this->conn->prepare("DELETE FROM tasks WHERE id = (:taskid)");

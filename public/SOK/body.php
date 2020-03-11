@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+<header>
+<nav>
+<ul>
+<li>Home</li>
+<li>About</li>
+<li><a href="register.php">Register</a></li>
+</ul>
+</nav>
+</header>
 <body>
 <div class="outer_container">
 <div class="tasks_img">
